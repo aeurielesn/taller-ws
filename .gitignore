@@ -1,0 +1,15 @@
+ws-model/nbproject/private
+ws-model/build
+ws-model/dist
+
+ws-ejb/nbproject/private
+ws-ejb/build
+ws-ejb/dist
+
+ws-web/nbproject/private
+ws-web/build
+ws-web/dist
+
+ws-client/nbproject/private
+ws-client/build
+ws-client/dist

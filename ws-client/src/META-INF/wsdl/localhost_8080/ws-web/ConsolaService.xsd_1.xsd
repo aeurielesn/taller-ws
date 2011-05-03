@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-hudson-28-. --><xs:schema xmlns:tns="http://ws.ws.arq.aeurielesn.unal.edu.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.ws.arq.aeurielesn.unal.edu.co/">
+
+<xs:element name="ejecutar" type="tns:ejecutar" />
+
+<xs:element name="ejecutarResponse" type="tns:ejecutarResponse" />
+
+<xs:element name="getHistorial" type="tns:getHistorial" />
+
+<xs:element name="getHistorialResponse" type="tns:getHistorialResponse" />
+
+<xs:complexType name="ejecutar">
+<xs:sequence>
+<xs:element name="comando" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ejecutarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHistorial">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getHistorialResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:historialDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="historialDTO">
+<xs:sequence>
+<xs:element name="comando" type="xs:string" minOccurs="0" />
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0" />
+<xs:element name="historialId" type="xs:long" minOccurs="0" />
+<xs:element name="resultado" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
